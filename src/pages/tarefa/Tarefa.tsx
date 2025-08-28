@@ -1,9 +1,10 @@
 ﻿import { useEffect, useState } from "react";
+//import Card from "../card/Card";
 
 function Tarefa() {
 
   const [completed, setCompleted] = useState(false);
-    const [tarefa, setTarefa] = useState('');
+  const [tarefa, setTarefa] = useState('');
 
     useEffect(() => {
 
@@ -14,12 +15,16 @@ function Tarefa() {
       }
 
     }, [completed]);
+
+
   return (
 
     <>
       <h1>Componente Tarefa</h1>
       <h3>{tarefa}</h3>
       <button onClick={() => setCompleted(true)}>{completed ? "Desfazer" : "Concluir"}</button>
+
+
     </>
     
   )
